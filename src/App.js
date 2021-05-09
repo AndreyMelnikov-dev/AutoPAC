@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 import { withRouter, Route } from 'react-router-dom';
 // Components
 import Header from './components/Header/Header';
-import ProjectsList from './components/ProjectsList/ProjectsList'
+import ProjectsListContainer from './components/ProjectsList/ProjectsListContainer';
 
 
 function App() {
   return (
     <div className="app_wrapper">
       <Header />
-      <Route path="/ProjectsList" render={() => <ProjectsList />}/>
+      <Route path="/ProjectsList" render={() => <ProjectsListContainer />}/>
     </div>
   );
 }

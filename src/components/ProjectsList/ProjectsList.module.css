@@ -1,39 +1,5 @@
-.projectsList_title {
+.projects_title {
     font-size: 26px;
     font-weight: 300;
-    padding: 20px 0 40px 20px;
+    margin: 20px 0 30px 20px;
 }
-
-/* actions_line */
-
-.actions_line {
-    height: 60px;
-    background: #ededed;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0 40px;
-}
-
-.actions_delete {
-    cursor: pointer;
-}
-
-.actions_create {
-    height: 38px;
-    padding: 0 25px;
-    background: #11a65a;
-    box-shadow: 0px 0px 5px rgb(0 0 0 / 30%);
-    color: white;
-    font-weight: 300;
-    transition: 0.3s;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    margin-left: 30px;
-}
-
-.actions_create:hover {
-    background: rgb(22, 192, 104);
-}
-

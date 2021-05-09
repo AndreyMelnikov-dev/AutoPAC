@@ -1,13 +1,14 @@
 import s from './Modal.module.css';
 
-const Modal = ({active, setActive, children}) =>{
-    return (
-        <div className={active ? s.modal + ' ' + s.active : s.modal} onClick={() => setActive(false)}>
-            <div className={s.modal__cont} onClick={e => e.stopPropagation()}>
-                {children}
+const Modal = (props) =>{
+    return(
+        <div className={props.active ? s.modal + ' ' + s.active : s.modal}>
+            <div className={s.modal__cont}>
+                <span className={s.modal__close}>&times;</span>
+                {props.children}
             </div>
         </div>
     )
 }
 
-export default Modal
+export default Modal;

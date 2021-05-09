@@ -1,27 +1,15 @@
 import s from './ProjectsList.module.css';
-import {useState} from 'react';
-import del_icon from './delete.png';
-import Modal from '../Modal/Modal';
-import ProjectsTable from './ProjectsTable/ProjectsTable';
+import ProjectsListActions from './ProjectsListActions/ProjectsListActions';
+import ProjectsListTable from './ProjectsListTable/ProjectsListTable';
 
-const ProjectsList = () => {
-    const [modalActive, setModalActive] = useState(false)
-    
+const ProjectsList = (props) =>{
     return (
-        <div className={s.projectsList_wrapper}>
-            <h2 className={s.projectsList_title}>Ваши проекты</h2>
-            <div className={s.actions_line}>
-                <button className={s.actions_delete}>
-                    <img src={del_icon} />
-                </button>
-                <button className={s.actions_create} onClick={() => setModalActive(true)}>Добавить</button>
-            </div>
-            <ProjectsTable />
-            <Modal active={modalActive} setActive={setModalActive}>
-                <p>Нихуя себе, это модалка!</p>
-            </Modal>
+        <div className={'projects_wrapper'}>
+            <h2 className={s.projects_title}>Ваши проекты</h2>
+            <ProjectsListActions />
+            <ProjectsListTable projects={props.projects} />
         </div>
     )
 }
 
-export default ProjectsList
+export default ProjectsList;
