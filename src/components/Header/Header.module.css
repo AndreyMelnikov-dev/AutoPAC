@@ -1,0 +1,45 @@
+.header_wrapper{
+    height: 72px;
+    border-bottom: 1px solid #d2d2d2;
+    padding: 0 40px;
+    box-sizing: border-box;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* header links */
+
+.header_link{
+    margin-right: 30px;
+    transition: .3s;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.header_link:last-child{
+    margin-right: 0;
+}
+
+.header_link:hover{
+    color: #11a65a;
+}
+
+/* header profile */
+
+.header_profile{
+    display: flex;
+    align-items: center;
+}
+
+.profile_name{
+    margin-right: 20px;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.profile_avatar{
+    border-radius: 50%;
+}
