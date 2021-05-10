@@ -12,6 +12,7 @@ let initialState = {
 const projectsListReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_PROJECT:
+            state.projects = state.projects.filter(item => item.id !== 0);
             if (action.projectName !== undefined)
                 return {
                     ...state,
@@ -25,7 +26,8 @@ const projectsListReducer = (state = initialState, action) => {
             return {
                 ...state,
                 projects: state.projects
-            };
+            }
+
         default:
             return state;
     }
